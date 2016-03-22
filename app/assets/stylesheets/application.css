@@ -30,10 +30,22 @@ nav > h1 {
   display: inline-block;
 }
 
-
 .navbar-text {
   padding-top: 1em;
   padding-right: 1em;
   float: right;
   display: inline-block;
+}
+
+.devise-form {
+  border: 1px solid black;
+  border-radius: 12px;
+  background: white;
+  margin: 15% auto;
+  height: 40%; width: 40%;
+  text-align: center;
+}
+
+.devise-form > * {
+  /*padding: 1em;*/
 }
