@@ -14,10 +14,18 @@
  *= require_self
  */
 
+html  {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: lightblue;
+  background-image: url('http://www.stefanmensen.nl/0_Dump/Skybox/CartoonGrassHill01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 nav {
@@ -33,7 +41,6 @@ nav > h1 {
 .navbar-text {
   padding-top: 1em;
   padding-right: 1em;
-  float: right;
   display: inline-block;
 }
 
@@ -46,6 +53,14 @@ nav > h1 {
   text-align: center;
 }
 
-.devise-form > * {
-  /*padding: 1em;*/
+input {
+  height: 25px; width: 60%;
+}
+
+.field {
+  padding: .5em;
+}
+
+.actions {
+  margin: 1em;
 }

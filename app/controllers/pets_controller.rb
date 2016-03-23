@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   def index
+    # @pet = Pet.find(params[:id])
     if current_user
         puts "I'm logged in as #{current_user.email}"
     else
