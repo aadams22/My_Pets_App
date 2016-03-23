@@ -19,47 +19,48 @@ class PetsController < ApplicationController
 
 def createOli
   puts "Create Oli!"
-  mypet = Pet.new({
+
+  user = current_user
+  p id = current_user.id.to_i
+
+  new_friend = Pet.new({
     pet_name: 'Oli',
-    type: 'dog',
+    kind: 'dog',
     color: 'blonde',
-    hunger_level: '0',
-    loved_level: '100'
+    hunger_level: 0,
+    loved_level: 100,
+    user_id: id
     })
 
 
-  mypet << current_user
-
-  if mypet.save
-    redirect_to show_path(mypet)
+  if new_friend.save
+    redirect_to show_path(new_friend)
   else
     render :action => :new
   end
-
-  redirect_to '/pets'
 
 end
 
 def createOlive
   puts "createOlive!"
-  new_friend = {
+  id = current_user[:id]
+
+  new_friend = Pet.new({
     pet_name: 'Olive',
-    type: 'cat',
+    kind: 'cat',
     color: 'grey',
-    hunger_level: '0',
-    loved_level: '100'
-  }
+    hunger_level: 0,
+    loved_level: 100,
+    user_id: id
+  })
 
-  mypet = Pet.new(new_friend)
-  mypet << current_user
 
-  if mypet.save
-    redirect_to show_path(mypet)
+  if new_friend.save
+    redirect_to show_path(new_friend)
   else
     render :action => :new
   end
 
-  redirect_to '/pets'
 
 end
 
