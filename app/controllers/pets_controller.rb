@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  ForecastIO.api_key = '3a41824837a92c321904523b5e541134'
 
   def index
     # @pet = Pet.find(params[:id])
@@ -71,6 +72,7 @@ def new
 end
 
 def show
+  @forecast = ForecastIO.forecast(45.267155, -96.328125, options = {})
   id = current_user.id.to_i
   @mypet = Pet.find_by user_id: id
   @user = current_user

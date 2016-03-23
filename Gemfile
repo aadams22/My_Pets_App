@@ -46,4 +46,8 @@ group :development do
 
   #Authentication through Devise
   gem 'devise'
+
+  #forecast_io API
+  gem 'forecast_io'
+
 end
