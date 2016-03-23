@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160322222956) do
     t.string   "pet_name"
     t.string   "kind"
     t.string   "color"
+    t.string   "img_url"
     t.integer  "hunger_level"
     t.integer  "loved_level"
     t.datetime "created_at",   null: false

@@ -29,12 +29,14 @@ body {
 }
 
 nav {
+  font-family: 'Quattrocento Sans', sans-serif;
   background-color: white;
   border-bottom: 1px solid black;
 }
 
 nav > h1 {
   padding: .50em;
+  padding-right: 1em;
   display: inline-block;
 }
 
@@ -63,4 +65,28 @@ input {
 
 .actions {
   margin: 1em;
+}
+
+.pet-image-container {
+  margin: 29% auto;
+  border: 1px solid black;
+  /*height: 50%; width: 50%;*/
+}
+
+.pet-image-container > img {
+  margin: 0 35%;
+  height: 20%; width: 20%;
+  padding: 1em;
+  display: inline-block;
+}
+
+h2 {
+
+}
+
+.name-container {
+  font-family: 'Indie Flower', cursive;
+  margin: 14% auto;
+  border: 1px solid black;
+  width: 37%;
 }
