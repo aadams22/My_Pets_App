@@ -50,4 +50,7 @@ group :development do
   #forecast_io API
   gem 'forecast_io'
 
+  #geocoder API
+  gem 'geocoder'
+
 end
