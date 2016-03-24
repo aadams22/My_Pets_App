@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
   skip_before_action :verify_authenticity_token
-
+  ForecastIO.api_key = '3a41824837a92c321904523b5e541134'
 
 #============INDEX============
   def index
@@ -72,24 +72,21 @@ class PetsController < ApplicationController
 
 #============SHOW============
   def show
+    require 'date'
+
     id = current_user.id
     user = User.find(id)
     id = current_user.id.to_i
     @mypet = Pet.find_by user_id: id
 
-    puts '=========='
     lat_lng = cookies[:lat_lng].split("|")
     lat = lat_lng[0].to_f
     long = lat_lng[1].to_f
-    @forecast = ForecastIO.forecast(lat, long, options = {})
-    # @user = current_user
+    puts @forecast = ForecastIO.forecast(lat, long, options = {})
     timestamp = @forecast.currently.time
-    require 'date'
     current_timestamp = Time.at(timestamp).to_datetime
     @current_time =  current_timestamp.strftime("%I:%M%p")
   end
-
-
 
 
 end #Controller
