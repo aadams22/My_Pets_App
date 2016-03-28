@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  ForecastIO.api_key = '3a41824837a92c321904523b5e541134'
+  ForecastIO.api_key = Rails.application.secrets.ForecastIO_api_key
 
 #============INDEX============
   def index
