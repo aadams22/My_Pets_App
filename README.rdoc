@@ -1,7 +1,7 @@
 == Oli & Olive
 
 
-##Description:
+=== Description:
 Oli and Olive is a landing page where users can choose either a cat or a dog to sit as their landing page pet and tell them the current weather.
 
 ##Tech Used:
@@ -10,13 +10,10 @@ Oli and Olive is a landing page where users can choose either a cat or a dog to 
 * Devise
 * ForecastIO
 
-##Future Implementations:
+=== Future Implementations:
 * Allow for pets to have a hunger scale and allow users to feed their pet
 * Allow for pets to have a love scale and allow users to pet their pet
 * Create chart to show love or hunger need
 
-##Author:
+=== Author:
 Ashleigh Adams
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
