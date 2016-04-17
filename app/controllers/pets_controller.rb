@@ -35,7 +35,7 @@ class PetsController < ApplicationController
 
 
     if new_friend.save
-      redirect_to show_path(new_friend)
+      redirect_to show_path(new_friend.id)
     else
       render :action => :new
     end
